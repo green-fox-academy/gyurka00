@@ -5,15 +5,6 @@ img{
   width: 100%;
 }
 
-article{
-  max-width: 700px;
-  margin-left: auto;
-  margin-top: 35vw;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px;
-}
-
 h1,
 h2{
   text-align: center;
@@ -44,8 +35,21 @@ p {
   font-family: Patua One;
   line-height: 1.5;
   text-align:left;
+  margin-bottom:0.5%;
 }
 
-.CV_img{
-  position: top;
+.header_background{
+  background-image: url('../img/CV.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 34vw;
+}
+
+.text{
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 }
