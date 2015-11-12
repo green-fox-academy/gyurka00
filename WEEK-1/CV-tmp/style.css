@@ -1,0 +1,22 @@
+body{
+color: #333;
+font-family: 'Josefin Sans',sans-serif;
+line-height: 1.5;
+}
+
+h1{
+  font-family: 'Abrril Fatface', serif;
+}
+
+.wrap{
+  max-width: 40em
+  margin:0 auto;
+}
+
+p{
+  color: red;
+}
+
+.kacsa p{
+  color: blue;
+}

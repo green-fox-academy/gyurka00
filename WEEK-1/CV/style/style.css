@@ -38,16 +38,22 @@ p {
   margin-bottom:0.5%;
 }
 
-.header_background{
+body{
   background-image: url('../img/CV.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 34vw;
+}
+
+section{
+  background-color: white;
+  margin: 2em;
+  padding: 1em;
 }
 
 .text{
   max-width: 700px;
+  margin-top: 35vw;
   margin-left: auto;
   margin-right: auto;
   padding-left: 10px;
