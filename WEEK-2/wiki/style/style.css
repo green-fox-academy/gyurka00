@@ -2,31 +2,43 @@ html{
   min-height: 100%;
 }
 body {
-  background-color: #f6f6f6;
+  background: #f6f6f6;
   margin: 0;
   display: flex;
   min-height: 100vh;
+  font-family: sans-serif;
+  background-image: linear-gradient(#ffffff 5%,#f6f6f6 20%);
 }
 
-main {
-  background-color: #ffffff;
-  border: 1px solid #a7d7f9;
+.main-header li,p {
+  font-size: 14px;
+}
+
+h1,
+h2 {
+  font-family: serif;
+  font-weight: normal;
+  margin: 0;
+  border-bottom: 1px solid #aaa;
+  overflow: hidden;
+}
+h1 {
+  font-size: 28.8px;
 }
 
 .main-container {
-  background-color: #ffffff;
   order: 1;
   width: 100%;
 }
 
 .main-slidebar {
+  flex: 0 0 auto;
   order: 0;
   width: 176px;
 
 }
 
 .main-header {
-  background-image: linear-gradient(#ffffff 50%,#f6f6f6 100%);
   height: 87px;
   position: relative;
 }
@@ -39,6 +51,14 @@ main {
 
 .main-header li {
   list-style: none;
+}
+
+.main-content {
+  background-color: #ffffff;
+  border: 1px solid #a7d7f9;
+  border-right: 0;
+  padding: 16px;
+
 }
 
 .biography {
@@ -54,6 +74,15 @@ main {
 .main-footer {
   background-color: #f6f6f6;
   height: 150px;
+}
+
+.logo{
+  background-image: url(../img/wiki.png);
+  display: block;
+  width: 135px;
+  height: 150px;
+  margin-top: 6px auto 0;
+  color: rgba(0, 0, 0, 0);
 }
 
 .main-header nav, .search {

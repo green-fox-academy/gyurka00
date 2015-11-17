@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My wikipedia</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/form.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="main-header">
+        <nav class="user-menu">
+          <ul>
+            <li>Create Account</li>
+            <li>Not logged in</li>
+            <li>Talk</li>
+            <li>Contributions</li>
+            <li>Log in</li>
+          </ul>
+        </nav>
+        <nav class="talk-menu">
+          <ul>
+            <li>Article</li>
+            <li>Talk</li>
+          </ul>
+        </nav>
+        <nav class="edit-menu">
+          <ul>
+            <li>Read</li>
+            <li>Edit</li>
+            <li>View history</li>
+          </ul>
+        </nav>
+        <form class="search"  method="post">
+          <div class="search">
+            <input type="search-tool">
+            <div class="search-icon"></div>
+          </div>
+        </form>
+      </header>
+      <main class="main-content">
+        <h1>Create account</h1>
+        <form class="main-form" action="#" method="post">
+          <p>
+            <label for="username">Username</label>
+            <a href="#" class="username-help">(help me choose)</a>
+          </p>
+          <input class="user-input" type="text" name="username" id="username" placeholder="Enter your name">
+          <p>
+            <label for="userpass">Password</label>
+          </p>
+          <input class="user-input" type="password" id="userpass" placeholder="Enter a password">
+          <p>
+            <label for="confirm-userpass">Confirm password</label>
+          </p>
+          <input class="user-input" type="password" id="confirm-userpass" placeholder="Enter password again">
+          <p>
+            <label for="user-email">Email address (optional)</label>
+          </p>
+          <input class="user-input" id="user-email" type="email" placeholder="Enter your email address">
+          <p><button class="user-input user-input-button" type="button">Create your account</button></p>
+        </form>
+
+      </main>
+      <footer class="main-footer">footer</footer>
+    </div>
+    <aside class="main-slidebar">
+      <a href="#" class="logo">Wikipedia</a>
+    </aside>
+  </body>
+</html>

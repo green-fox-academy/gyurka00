@@ -1,0 +1,63 @@
+.user-input {
+  width: 290px;
+  font-style: italic;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  height: 32px;
+  margin-bottom: 15px;
+}
+
+.main-form p {
+  box-sizing: border-box;
+  padding: 0;
+  margin-bottom: 2px;
+}
+
+.user-input-button {
+  margin-top: 3px;
+  background-color: rgb(0, 175, 137);
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid rgb(0, 175, 137);
+}
+.user-input-button:hover {
+  background-color: #008c6d;
+  border: 1px solid #008c6d;
+}
+.main-form{
+  position: relative;
+  width: 290px;
+}
+.username-help {
+  position: absolute;
+  right: 0;
+  text-decoration: none;
+}
+
+.main-form input {
+  padding: 4.2px 4.2px 4.2px 8.4px;
+}
+.main-form input:focus {
+  box-shadow: inset 0 0 0 2px #347bff;
+  border-color: #347bff;
+  outline: 0
+}
+
+.search {
+  position: absolute;
+}
+
+.search-tool,
+.search-icon {
+  position:relative;
+}
+
+.search-icon {
+  background-image: url(../img/search-ltr.png);
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+}
