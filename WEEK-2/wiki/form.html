@@ -5,37 +5,31 @@
     <title>My wikipedia</title>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/form.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <div class="main-container">
       <header class="main-header">
         <nav class="user-menu">
           <ul>
-            <li>Create Account</li>
-            <li>Not logged in</li>
-            <li>Talk</li>
-            <li>Contributions</li>
-            <li>Log in</li>
+            <li>
+              <a href="#">Create Account</a>
+            </li>
+            <li>
+              <a href="#">Log in</a>
+            </li>
           </ul>
         </nav>
-        <nav class="talk-menu">
+        <nav class="talk-menu tab">
           <ul>
-            <li>Article</li>
-            <li>Talk</li>
-          </ul>
-        </nav>
-        <nav class="edit-menu">
-          <ul>
-            <li>Read</li>
-            <li>Edit</li>
-            <li>View history</li>
+            <li class="active-tab">
+              <a href="">Special page</a>
+            </li>
           </ul>
         </nav>
         <form class="search"  method="post">
-          <div class="search">
-            <input type="search-tool">
-            <div class="search-icon"></div>
-          </div>
+          <input type="search" placeholder="Search">
+          <input type="submit" value="">
         </form>
       </header>
       <main class="main-content">
@@ -58,14 +52,67 @@
             <label for="user-email">Email address (optional)</label>
           </p>
           <input class="user-input" id="user-email" type="email" placeholder="Enter your email address">
+          <p>To edit this page, please enter the words that appear below in the box (more info):</p>
+          <p>CAPTCHA Security check</p>
+          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
           <p><button class="user-input user-input-button" type="button">Create your account</button></p>
         </form>
 
       </main>
-      <footer class="main-footer">footer</footer>
+      <footer class="main-footer">
+        <ul class="footer-menu">
+          <li>
+            <a href="">Privacy policy</a>
+          </li>
+          <li>
+            <a href="">About Wikipedia</a>
+          </li>
+          <li>
+            <a href="">Disclaimers</a>
+          </li>
+          <li>
+            <a href="">Contact Wikipedia</a>
+          </li>
+          <li>
+            <a href="">Developers</a>
+          </li>
+          <li>
+            <a href="">Mobile view</a>
+          </li>
+        </ul>
+        <ul class="footer-img">
+          <li><img src="img/wikimedia-button.png"></li>
+          <li><img src="img/poweredby_mediawiki_88x31.png"></li>
+        </ul>
+      </footer>
     </div>
-    <aside class="main-slidebar">
+    <aside class="main-sidebar">
       <a href="#" class="logo">Wikipedia</a>
+      <ul class="guides">
+        <li><a href="#">Main page</a></li>
+        <li><a href="#">Contents</a></li>
+        <li><a href="#">Featured content</a></li>
+        <li><a href="#">Current events</a></li>
+        <li><a href="#">Random article</a></li>
+        <li><a href="#">Donate to Wikipedia</a></li>
+        <li><a href="#">Wikipedia store</a></li>
+      </ul>
+      <p>Interaction</p>
+      <ul>
+        <li><a href="">Help</a></li>
+        <li><a href="">About Wikipedia</a></li>
+        <li><a href="">Community portal</a></li>
+        <li><a href="">Recent changes</a></li>
+        <li><a href="">Contact page</a></li>
+      </ul>
+      <p>Tools</p>
+      <ul>
+        <li><a href="#">Upload file</a></li>
+        <li><a href="#">Special pages</a></li>
+        <li><a href="#">Printable version</a></li>
+      </ul>
+      <div class="language-setting"></div>
+      <p>Languages</p>
     </aside>
   </body>
 </html>

@@ -44,11 +44,31 @@ input[type="search"]::-webkit-search-cancel-button {
   width: 100%;
 }
 
-.main-slidebar {
+.main-container p,
+.main-container div,
+.main-container li {
+  font-size: 13px;
+}
+
+.main-sidebar {
   flex: 0 0 auto;
   order: 0;
   width: 176px;
+  font-size: 12px;
+  line-height: 1.5;
+}
 
+
+.main-sidebar p {
+  background-image: url(../img/portal-break.png);
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-top: 5px;
+}
+
+.guides,
+.main-sidebar p {
+  padding-left: 15px;
 }
 
 .main-header {
@@ -63,8 +83,15 @@ input[type="search"]::-webkit-search-cancel-button {
   padding: 0;
 }
 
-.main-header li {
+.main-header li,
+.main-sidebar li,
+.main-footer li,
+.main-container-footer li {
   list-style: none;
+}
+
+.main-sidebar li a {
+  color: #0645ad
 }
 
 .main-content {
@@ -72,7 +99,6 @@ input[type="search"]::-webkit-search-cancel-button {
   border: 1px solid #a7d7f9;
   border-right: 0;
   padding: 16px;
-
 }
 
 .biography {
@@ -83,6 +109,46 @@ input[type="search"]::-webkit-search-cancel-button {
   margin: 6px 0px 12px 12px;
   padding: 25px;
   width: 270px;
+  font-size: 13px;
+}
+.biography p {
+  text-align: center;
+}
+
+/*dl {
+
+}
+
+dt {
+  font-weight: bold;
+  float: left;
+  width: 30px;
+}
+
+dd {
+  right: 35px;
+}*/
+
+dl {
+  width: 115%;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  left: -5px;
+}
+dt {
+  float: left;
+  font-weight: bold;
+  width: 30%;
+  padding: 0;
+  margin: 0 8px 0 0;
+  left: -20px;
+}
+dd {
+  float: left;
+  width: 60%;
+  padding: 0;
+  margin: 0 0 5px 5px;
 }
 
 .main-footer {
@@ -103,6 +169,16 @@ input[type="search"]::-webkit-search-cancel-button {
    flex: 0 0 auto;
    order: 0;
    width: 176px;
+}
+
+.language-setting {
+  background-image: url(../img/setting.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 14px;
+  width: 14px;
+  float: right;
+  margin: 10px 10px 0 0;
 }
 
 .main-header nav, .search {
@@ -204,4 +280,46 @@ input[type="search"]::-webkit-search-cancel-button {
 .edit-menu {
   bottom: 0;
   right: 300px;
+}
+
+.main-footer {
+  margin-top: 0;
+  padding: 0.75em;
+  font-size: 0.7em;
+}
+
+.main-footer li{
+  float: left;
+  margin-right: 1em;
+  line-height: 2em;
+}
+
+.main-footer ul {
+  padding: 0;
+}
+
+.footer-menu {
+  margin-bottom: 5px;
+}
+
+.footer-img {
+  float: right;
+}
+
+ol {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}
+
+ol > li {
+  margin-left: 25px;
+  margin-bottom: 10px;
+}
+
+.main-container-footer {
+  border: 1px solid #aaa;
+  background-color: #f9f9f9;
+  padding: 5px;
+  margin-top: 1em;
 }

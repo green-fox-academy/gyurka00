@@ -48,10 +48,6 @@
   outline: 0
 }
 
-.search {
-  position: relative;
-}
-
 .search-tool,
 .search-icon {
   position: absolute;
@@ -63,4 +59,8 @@
   width: 15px;
   height: 15px;
   background-repeat: no-repeat;
+}
+
+.g-recaptcha {
+  width: 100%;
 }
