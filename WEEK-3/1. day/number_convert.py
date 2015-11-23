@@ -97,11 +97,6 @@ def number_convert(get):
             number-=1
     return tmp
 
-
-
-
-
-
 number=input("Write a number and press enter:")
 if int(number)>3999 or int(number)==0:
     print("You are stupid!")
