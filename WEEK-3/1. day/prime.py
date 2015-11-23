@@ -7,7 +7,7 @@ while n<= tmp**0.5:
         flag+=1
         break
     n+=1
-if flag>0:
+if flag>0 or tmp==1 or tmp==0:
     print(tmp,"a szam nem prim")
 else:
     print(tmp,"a szam prim")
@@ -26,6 +26,6 @@ while i < tmp+1:
             flag2+=1
             break
         n+=1
-    if flag2==0:
+    if flag2==0 and tmp!=1:
         print(i)
     i+=1
