@@ -14,14 +14,14 @@ def search_palindromes(string):
                 i = lenght - 1
                 while i < len(word):
                     start_char=i+1-lenght
-                    if word[start_char:i+1] == str_reverse(word[start_char:i+1]) and word[start_char:i+1] != '':
+                    if word[start_char:i+1] == str_reverse(word[start_char:i+1]) and word[start_char:i+1] != '' and word[start_char:i+1] != word[start_char-1:i]:
                         palindromes.append(word[start_char:i+1])
                     i += 1
                 lenght += 1
 
     return palindromes
 
-def palindromes():
+def palindromes_input():
     input_string = ''
     while input_string == '' :
         try:
@@ -30,7 +30,6 @@ def palindromes():
                 raise ValueError('empty string')
         except ValueError:
             print("Your entered a wrong value")
-    print(input_string)
     return search_palindromes(input_string)
 
-print(palindromes())
+print(palindromes_input())
