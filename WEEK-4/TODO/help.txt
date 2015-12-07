@@ -1,0 +1,19 @@
+
+ODOT-TODO for Developers v0.1
+
+usage: todo [--version] [--help] [--menu] <command> [<args>]
+
+The most commonly used todo commands are:
+  add 'text'  Add task to the todo list
+  ch          Check completed task
+  del         Delete database
+  ls          List all incompleted tasks from todo list
+  ls -ch      List all completed tasks from todo list
+  ls -l       List all completed and incompleted tasks from todo list
+  ls -la      List all completed, incompleted and removed tasks from todo list
+  rm          Remove list element from todo list
+  rm -r       Remove list element from todo list (revocable)
+  rm -rf      Remove list element from todo list and database (not revocable)
+  src         Search
+  st          Same as ls -la
+  uch         Uncheck already checked task
