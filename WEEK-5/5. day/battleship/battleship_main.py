@@ -33,7 +33,7 @@ while i < 11:
 ref_table = battleship.Table()
 
 table = battleship.Table(out_default_table)
-table.lives = 1
+
 while table.lives > 0:
     table.drav_table()
     put_row = input('Write a row number: ')
