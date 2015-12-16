@@ -12,7 +12,7 @@ class Menu():
         while True:
             try:
                 sub_menu = int(input("Write the submenu number and press enter: "))
-                if not sub_menu or sub_menu < 0 or sub_menu >= len(self.items):
+                if not sub_menu or sub_menu < 0 or sub_menu > len(self.items):
                     raise ValueError('')
                 else:
                     return sub_menu

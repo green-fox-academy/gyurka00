@@ -1,17 +1,51 @@
 import menu
 from menu_item import MenuItem
 import player
+import character
 import json
 
 user = player.Player()
+monster = character.Character()
 
 def save():
     data_file = open('data.json', 'w')
     json.dump(user.create_dictionary(), data_file)
     data_file.close()
 
-def strike():
+def strike_sub_menu_continue():
     pass
+
+def strike_sub_menu_luck():
+    pass
+
+def strike_sub_menu_retreat():
+    pass
+
+def strike_sub_menu_quite():
+    pass
+
+def strike_sub_menu(who):
+    par = [
+        MenuItem(1, 'Continue', strike_sub_menu_continue),
+        MenuItem(2, 'Try your Luck', strike_sub_menu_luck),
+        MenuItem(3, 'Retreat', strike_sub_menu_retreat),
+        MenuItem(4, 'Quit', strike_sub_menu_quite)
+        ]
+    strike_sub_menu = menu.Menu(par)
+    strike_sub_menu.menu_draw()
+
+def strike():
+    player_roll = user.roll() + user.roll()
+    monster_roll = monster.roll() + monster.roll()
+    if player_roll > monster_roll:
+        print('You hit the monster')
+        return strike_sub_menu(monster)
+    elif player_roll == monster_roll:
+        print('You are lucky.')
+        return strike()
+    else:
+        print('The monster hit you')
+        return strike_sub_menu(user)
 
 def retreat():
     pass
@@ -32,9 +66,8 @@ def begin():
     print('\n---Test Fight---\n')
     print('User')
     print(user.print_all_stats())
-    monster = player.Player()
     print('Monster')
-    print(monster.print_monster_stats())
+    print(monster.print_stats())
     begin_menu()
 
 def potion_continue_quite():
