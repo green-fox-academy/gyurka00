@@ -15,6 +15,11 @@ class Character():
         number = random.randrange(1, 6)
         return number
 
+    @staticmethod
+    def double_roll():
+        number = self.roll() + self.roll()
+        return number
+
     def print_stats(self):
         output = ''
         output += 'Max Dexterity: ' + str(self.max_dexterity) + '\n'

@@ -35,8 +35,8 @@ def strike_sub_menu(who):
     strike_sub_menu.menu_draw()
 
 def strike():
-    player_roll = user.roll() + user.roll()
-    monster_roll = monster.roll() + monster.roll()
+    player_roll = user.double_roll()
+    monster_roll = monster.double_roll()
     if player_roll > monster_roll:
         print('You hit the monster')
         return strike_sub_menu(monster)
