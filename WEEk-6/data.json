@@ -1,1 +1,1 @@
-{"dexterity": 11, "health": 19, "name": "Korte", "inventory": ["None", "Leather Armor", "Sword"], "luck": 7}
+{"max_luck": 11, "health": 18, "max_dexterity": 8, "max_health": 18, "dexterity": 8, "name": "test", "luck": 11, "inventory": ["Potion of Dexterity", "Leather Armor", "Sword"]}
