@@ -1,4 +1,7 @@
-WEEK-1/CV/img/CV.psd
+*.psd
 *.pyc
 __pycache__
+*.pptx
+*.pdf
+*.docx
 syllabus-2015-Nov
