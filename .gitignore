@@ -1,3 +1,5 @@
+*.png
+*.jpg
 *.psd
 *.pyc
 __pycache__
