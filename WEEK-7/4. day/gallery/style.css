@@ -1,3 +1,7 @@
+body {
+  background-color: #696969;
+}
+
 button {
   background-image: url(pic/button.png);
   background-repeat: no-repeat;
@@ -24,8 +28,6 @@ h1 {
 }
 
 .left {
-  background-image: url(pic/button.png);
-  background-repeat: no-repeat;
   transform: rotate(180deg);
 }
 
@@ -49,4 +51,27 @@ h1 {
 	-moz-border-radius: 50px;
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
+}
+
+
+.bigPic:hover {
+
+  -webkit-transition: all 1000s linear;
+  transition: all 1000s linear;
+
+  -webkit-transform: rotateX(43200deg) rotateY(14400deg)
+  transform: rotateX(43200deg) rotateY(14400deg);
+
+  -webkit-animation: rotator 25s linear infinite;
+  animation: rotator 25s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0%   { -webkit-transform: rotateX(0deg)    rotateY(0deg);    }
+  100% { -webkit-transform: rotateX(1080deg) rotateY(360deg);  }
+}
+
+@keyframes rotator {
+  0%   { transform: rotateX(0deg)    rotateY(0deg);    }
+  100% { transform: rotateX(1080deg) rotateY(360deg);  }
 }

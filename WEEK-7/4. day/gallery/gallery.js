@@ -1,4 +1,5 @@
 'use strict';
+
 var pictures = [
   'pic/0.jpg',
   'pic/1.jpg',
@@ -54,6 +55,7 @@ function setCurrentPosition(num) {
 }
 
 document.querySelector('.left').addEventListener("click", function() {
+  document.activeElement.blur();
   previousPic();
 });
 
@@ -62,28 +64,32 @@ function previousPic(){
       setCurrentPosition(7);
       setBigPic(pictures[currentPosition]);
     } else {
+      setBigPic(pictures[currentPosition-1]);
       setCurrentPosition(currentPosition-1);
-      setBigPic(pictures[currentPosition]);
     }
 }
 
-document.querySelector('.right').addEventListener("click", function() { nextPic();});
+document.querySelector('.right').addEventListener("click", function() {
+  document.activeElement.blur();
+  nextPic();
+});
 
 function nextPic(){
     if (currentPosition === 7) {
       setCurrentPosition(0);
       setBigPic(pictures[currentPosition]);
     } else {
+      setBigPic(pictures[currentPosition+1]);
       setCurrentPosition(currentPosition+1);
-      setBigPic(pictures[currentPosition]);
     }
 }
 
 document.addEventListener("keypress", keyEventHandler);
 function keyEventHandler(e) {
     var keyCode = e.keyCode;
-    if(keyCode == 112) {
-        previousPic();
+    console.log(keyCode);
+    if(keyCode === 112) {
+      previousPic();
     } else if (keyCode == 32) {
       nextPic();
     }
