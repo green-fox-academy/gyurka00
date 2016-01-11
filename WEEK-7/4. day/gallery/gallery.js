@@ -24,7 +24,6 @@ for (var i = 0; i < pictures.length; i++) {
 selectedThumbnails();
 
 function selectedThumbnails() {
-  // var picture = document.getElementById(pic0);
   document.getElementById('pic' + currentPosition).classList.add('selected');
 }
 
@@ -84,13 +83,13 @@ function nextPic(){
     }
 }
 
-document.addEventListener("keypress", keyEventHandler);
-function keyEventHandler(e) {
+
+window.onkeydown = function keyEventHandler(e) {
     var keyCode = e.keyCode;
     console.log(keyCode);
-    if(keyCode === 112) {
+    if(keyCode === 37) {
       previousPic();
-    } else if (keyCode == 32) {
+    } else if (keyCode == 39) {
       nextPic();
     }
 };
