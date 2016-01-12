@@ -1,37 +1,48 @@
 'use strict';
 
-var candysCounter = 100;
-var lollipopCounter = 180;
-var speed = 0;
+function Candy() {
+  this.candysCounter = 100;
+  this.lollipopCounter = 180;
+  this.speed = 18;
+  this.candiesNumber = document.querySelector('.candiesNumber');
+  this.candyButton = document.querySelector('.candyButton');
+  this.lollipopButton = document.querySelector('.lollipopButton');
+  this.lollipopsNumber = document.querySelector('.lollipopsNumber');
+  this.candiesPerSec = document.querySelector('.speed');
+  this.addCandy = addCandy;
 
-var candiesNumber = document.querySelector('.candiesNumber');
-var candyButton = document.querySelector('.candyButton');
-var lollipopButton = document.querySelector('.lollipopButton');
-var lollipopsNumber = document.querySelector('.lollipopsNumber');
-var candiesPerSec = document.querySelector('.speed');
+  var _this = this;
 
-candyButton.addEventListener('click', function() {
-  addCandy(1);
-});
+  this.lollipopButton.addEventListener('click', function() {
+    if (_this.candysCounter >= 10) {
+      _this.lollipopCounter++;
+      _this.candysCounter -= 10;
+      _this.candiesNumber.innerText = _this.candysCounter;
+      _this.lollipopsNumber.innerText = _this.lollipopCounter;
+    }
+  });
+
+  this.lollipopButton.addEventListener('click', function() {
+    if (_this.candysCounter >= 10) {
+      _this.lollipopCounter++;
+      _this.candysCounter -= 10;
+      _this.candiesNumber.innerText = _this.candysCounter;
+      _this.lollipopsNumber.innerText = _this.lollipopCounter;
+    }
+  });
+
+  setInterval(function() {
+    if (_this.lollipopCounter >= 10) {
+      _this.speed = Math.floor(_this.lollipopCounter/10);
+      _this.candiesPerSec.innerText = _this.speed;
+    _this.addCandy(_this.speed);
+    }
+  }, 1000);
+};
 
 function addCandy(number) {
-  candysCounter += number;
-  candiesNumber.innerText = candysCounter;
+  this.candysCounter += number;
+  this.candiesNumber.innerText = this.candysCounter;
 }
 
-lollipopButton.addEventListener('click', function() {
-  if (candysCounter >= 10) {
-    lollipopCounter++;
-    candysCounter -= 10;
-    candiesNumber.innerText = candysCounter;
-    lollipopsNumber.innerText = lollipopCounter;
-  }
-});
-
-setInterval(function() {
-  if (lollipopCounter >= 10) {
-    speed = Math.floor(lollipopCounter/10);
-    candiesPerSec.innerText = speed;
-  addCandy(speed);
-  }
-}, 1000);
+var candy = new Candy();
