@@ -1,9 +1,9 @@
 'use strict';
 
 function Candy() {
-  this.candysCounter = 100;
-  this.lollipopCounter = 180;
-  this.speed = 18;
+  this.candysCounter = 0;
+  this.lollipopCounter = 0;
+  this.speed = 0;
   this.candiesNumber = document.querySelector('.candiesNumber');
   this.candyButton = document.querySelector('.candyButton');
   this.lollipopButton = document.querySelector('.lollipopButton');
