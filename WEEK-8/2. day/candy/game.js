@@ -13,13 +13,8 @@ function Candy() {
 
   var _this = this;
 
-  this.lollipopButton.addEventListener('click', function() {
-    if (_this.candysCounter >= 10) {
-      _this.lollipopCounter++;
-      _this.candysCounter -= 10;
-      _this.candiesNumber.innerText = _this.candysCounter;
-      _this.lollipopsNumber.innerText = _this.lollipopCounter;
-    }
+  this.candyButton.addEventListener('click', function() {
+    _this.addCandy(1);
   });
 
   this.lollipopButton.addEventListener('click', function() {
