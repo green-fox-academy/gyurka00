@@ -1,7 +1,7 @@
 'use strict';
 
 function Candy() {
-  this.candysCounter = 0;
+  this.candysCounter = 9990;
   this.lollipopCounter = 0;
   this.speed = 0;
   this.candiesNumber = document.querySelector('.candiesNumber');
@@ -27,6 +27,9 @@ function Candy() {
   });
 
   setInterval(function() {
+    if (_this.candysCounter >= 10000) {
+      alert('Win!');
+    }
     if (_this.lollipopCounter >= 10) {
       _this.speed = Math.floor(_this.lollipopCounter/10);
       _this.candiesPerSec.innerText = _this.speed;
