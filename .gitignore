@@ -6,3 +6,4 @@ __pycache__
 *.docx
 *.json
 syllabus-2015-Nov
+node_modules
