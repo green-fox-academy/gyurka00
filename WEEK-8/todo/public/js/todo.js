@@ -45,21 +45,15 @@ var todoCallback = function (response) {
     var newTodoItem = document.createElement('p');
     newTodoItem.setAttribute('id', todoItem.id );
     newTodoItem.innerText = todoItem.text;
-    todoContainer.appendChild(newTodoItem);
-    if (todoItem.completed === false) {
-      var newCheckbox = addCheckbox(todoItem);
-      newCheckbox.setAttribute('class','completed');
-      newTodoItem.appendChild(newCheckbox);
-    } else {
-      var newComppletedItem = document.createElement('span');
-      newComppletedItem.innerText = '  X';
-      newTodoItem.appendChild(newComppletedItem);
+    if (todoItem.completed === true) {
+      newTodoItem.setAttribute('class', 'completed' );
     }
+    todoContainer.appendChild(newTodoItem);
     var newCheckbox = addCheckbox(todoItem);
-    newCheckbox.setAttribute('class','deleted');
+    newCheckbox.setAttribute('class','checkbox');
     newTodoItem.appendChild(newCheckbox);
   });
-  refresh();
+  //refresh();
 }
 
 function addCheckbox(todoItem) {
@@ -69,9 +63,9 @@ function addCheckbox(todoItem) {
   return newCheckbox;
 }
 
-function refresh() {
-  window.scrollTo(0,document.body.scrollHeight);
-}
+// function refresh() {
+//   window.scrollTo(0,document.body.scrollHeight);
+// }
 
 var url = 'http://whispering-forest-6132.herokuapp.com/todos';
 
@@ -91,26 +85,27 @@ sendButton.addEventListener('click', function () {
 });
 
 deleteButton.addEventListener('click', function () {
-  var items = document.querySelectorAll('.deleted');
+  var items = document.querySelectorAll('.checkbox');
   for (var i = 0; i < items.length; i++){
     if (items[i].checked === true) {
     createDELETE(url + '/' + items[i].id)
     }
   createGET(url, todoCallback);
-  refresh();
+  //refresh();
   }
 
 });
 
 submitButton.addEventListener('click', function () {
-  var items = document.querySelectorAll('.completed');
+  var items = document.querySelectorAll('.checkbox');
   for (var i = 0; i < items.length; i++){
     if (items[i].checked === true) {
       var data = items[i].parentNode;
+      items[i].setAttribute('class', 'completed' );
       createPUT(url + '/'+ items[i].id, data.innerText, true)
     }
   createGET(url, todoCallback);
-  refresh();
+  //refresh();
   }
 
 });
